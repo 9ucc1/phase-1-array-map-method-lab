@@ -26,11 +26,18 @@ const tutorials = [
     })
   }*/
 
-const titleCased = () => {
+const titleCased1 = () => {
   tutorials.map((tutorial)=>{
   const newTutorial = []
-  newTutorial.push(tutorial.split(' ').map((word) => word[0].toUpperCase()+word.slice(1)))
-    console.log(newTutorial.join(' '))
+  newTutorial.push(tutorial.split(' ').map((word) => (word.charAt(0).toUpperCase()+word.slice(1)).join(' ')))
+    console.log(newTutorial)
     return newTutorial
   })
+}
+
+const titleCased = () => {
+  tutorials.map((tutorial)=>{
+    let newTutorial = tutorial.split(' ').map(word => (word.charAt(0).toUpperCase() + word.slice(1)))
+  }
+  )
 }
